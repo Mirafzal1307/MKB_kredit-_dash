@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import type { Component } from 'vue'
-import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
-import { VNodeRenderer } from './VNodeRenderer'
 import { useUserStore } from '@/stores/user'
 import { injectionKeyIsVerticalNavHovered, useLayouts } from '@layouts'
 import { VerticalNavGroup, VerticalNavLink, VerticalNavSectionTitle } from '@layouts/components'
 import { config } from '@layouts/config'
 import type { NavGroup, NavLink, NavSectionTitle, VerticalNavItems } from '@layouts/types'
+import type { Component } from 'vue'
+import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
+import { VNodeRenderer } from './VNodeRenderer'
 
 interface Props {
   tag?: string | Component
@@ -79,7 +79,7 @@ const { user } = storeToRefs(userStore)
     <div class="nav-header">
       <slot name="nav-header">
         <RouterLink
-          to="/"
+          to="/individuals"
           class="app-logo d-flex align-center gap-x-3 app-title-wrapper"
         >
           <VNodeRenderer :nodes="config.app.logo" />
